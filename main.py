@@ -44,7 +44,10 @@ async def get_message(numb: int):
     """Функция-обработчик позволяющая с помощью API получить весь запрос
     с помощью его номера"""
     mes = await db.get_from_db(numb)
-    mess_dict = Message_from_BD(id=mes.id, message=mes.message, answer=mes.answer, date=mes.date)
+    mess_dict = Message_from_BD(id=mes.id,
+                                message=mes.message,
+                                answer=mes.answer,
+                                date=mes.date)
     return mess_dict
 
 

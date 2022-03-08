@@ -20,7 +20,6 @@ class my_DB:
 
     async def insert_into_db(self, received: str, sent: str):
         with self.engine.begin() as db:
-            self.metadata.create_all(db)
             obj = {"message": f"{received}",
                    "answer": f"{sent}",
                    "date": f"{datetime.datetime.now()}"}
@@ -28,7 +27,6 @@ class my_DB:
 
     async def get_from_db(self, num: int):
         with self.engine.begin() as db:
-            self.metadata.create_all(db)
             r = db.execute(select(self.messages).where(self.messages.c.id == f"{num}"))
             res = r.fetchone()
 
