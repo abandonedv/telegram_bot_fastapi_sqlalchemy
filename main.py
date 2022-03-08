@@ -8,7 +8,7 @@ from httpx import AsyncClient
 from pyngrok import ngrok
 
 from COIN_MARKET_CAP import price_of_crypt
-from DB_alchemy import my_DB
+from DB_SQLAlchemy import my_DB
 from my_own_valids import Price_of_crypt, Message_from_BD
 from validations import MessageBodyModel, ResponseToMessage
 
