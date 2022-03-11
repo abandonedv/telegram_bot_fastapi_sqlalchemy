@@ -10,7 +10,6 @@ class my_DB:
     metadata = MetaData()
     conn = engine.connect()
 
-
     messages = Table('messages_new', metadata,
                      Column('id', Integer, primary_key=True),
                      Column('message', String(50)),

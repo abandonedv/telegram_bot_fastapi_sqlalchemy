@@ -2,6 +2,7 @@ import asyncio
 import pprint
 from sys import exit
 
+import requests
 import uvicorn
 from fastapi import FastAPI, Request
 from httpx import AsyncClient
